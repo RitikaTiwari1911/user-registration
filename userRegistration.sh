@@ -5,6 +5,7 @@ echo "Welcome to the user registration problem"
 read -p "Enter the first name, make the first alphabet in Uppercase: " firstName
 read -p "Enter the last name, make the first alphabet in Uppercase: " lastName
 read -p "Enter the phone number: " phoneNo
+read -p "Enter the password: " password
 
 #regex expession to check first name ansd last name
 pat="^[A-Z]{1}[a-z]{2,}"
@@ -30,6 +31,17 @@ patPhone="^[0-9]{2}[: :][0-9]{10}$"
 if [[ $phoneNo =~ $patPhone ]]
 then
         echo "Phone no is: " $phoneNo
+else
+        echo "false"
+fi
+
+
+#condition for password
+patPassword="[a-zA-Z0-9[@#$%\*&%!]{8,}"
+
+if [[ $password =~ $patPassword ]]
+then
+        echo "Password no is: " $password
 else
         echo "false"
 fi
