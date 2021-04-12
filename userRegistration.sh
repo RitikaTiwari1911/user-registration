@@ -37,7 +37,7 @@ fi
 
 
 #condition for password (Rule 1)
-patPassword="[[a-z]*(?=.*[A-Z])*(?=.*[0-9])*.{8,}$]"
+patPassword="[a-z]*(?=.*[A-Z])*(?=.*[0-9])*([!@#\$%\^&\*\.]{1}).{8,}$"
 
 if [[ $password =~ $patPassword ]]
 then
