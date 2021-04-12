@@ -36,7 +36,7 @@ else
 fi
 
 
-#condition for password
+#condition for password (Rule 1)
 patPassword="[a-zA-Z0-9[@#$%\*&%!]{8,}"
 
 if [[ $password =~ $patPassword ]]
